@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Commissioner', sans-serif;
+    
+    }
+
+    /* main{
+        background-color: white;
+    } */
+
+
+
+    header{
+        background-image: url("../image/image-hero-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -10;
+        /* backdrop-filter: blur(100px); */
+    }
+
+    .bar1, .bar2 , .bar3{
+        transition: all 0.2s;
+    }
+
+
+
+    .open .bar1 {
+        transition: ease-in 0.2s;
+        translate: -15px -2px;
+        
+        transform: rotate(-45deg)  ;
+        
+    }
+
+    .open .bar3 {
+        translate: -15px -2px;
+        transition: all 0.2s;
+        transform: rotate(45deg)  ;
+        
+    }
+
+    .open .bar2{
+        display: none;
+    }
+
+    .openMenu{
+        display: flex;
+        
+    }
+
+    .openModal{
+        opacity: 1 !important;
+         visibility: visible; 
+        transition-delay: 0.001s !important;
+        /* display: block; */
+        
+
+    }
+
+    .closeModal{
+        display: none;
+    }
+
+    /* .modalBgActive{
+        background-color: rgba(0,0,0,0.4);    
+        opacity: 0.1;
+
+    } */
+
+    .modalActive {
+        overflow: hidden;
+    }
+
+
+    
+
+    .blurBg{
+        transition-delay: 0.001s !important;
+        overflow-y: scroll;
+        -webkit-filter: blur(1px) brightness(0.5);
+        -moz-filter: blur(2px) brightness(0.3);
+        -ms-filter: blur(2px) brightness(0.3);
+        -o-filter: blur(2px) brightness(0.3);
+        filter: blur(2px) brightness(0.3);
+        background: inherit;
+    }
+
+    .modalBg{
+        display: flex;
+        /* background-color: red; */
+        /* transition-delay: 0.001s !important;
+        overflow-y: scroll;
+        /* -webkit-filter: blur(1px) brightness(0.5); */
+        /* -moz-filter: blur(2px) brightness(0.3);
+        -ms-filter: blur(2px) brightness(0.3);
+        -o-filter: blur(2px) brightness(0.3);
+        filter: blur(2px) brightness(0.3); */
+        backdrop-filter: blur(3px) brightness(0.3);
+        background: inherit; 
+        overflow-y: scroll;
+    }
+
+    
+
+    
+    .fixedBody{
+        overflow-y: hidden !important;
+    }
+
+    #modal{
+        transition: 2s;
+    }
+
+    .selected{
+        display: flex;
+    }
+
+    .cardSelected {
+        border: 2px solid hsl(176, 50%, 47%);
+    }
+
+    #card1, #card2, #card3, #card4{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    #bookmark{
+        transition: all 0.2s;
+    }
+
+    .showText{
+        transition-delay: 0.2s;
+        transition: all 0.1s;
+        display: block;
+    }
+
+    .hideText{
+        transition: all 0.2s;
+        display: none;
+    }
+
+   .bookmark{
+    background-color: hsl(176, 50%, 47%);
+   }
+
+   /* #word1{
+    transform: translateX(130px);
+   } */
+
+    .box1, .box2, .box3{
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        border-radius: 7px;
+    }
+
+    @media screen and (max-width: 768px) {
+        header{
+            background-image: url("../image/image-hero-mobile.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+
+

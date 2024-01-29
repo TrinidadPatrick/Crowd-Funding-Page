@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src//output.css">
+    <link rel="stylesheet" href="./src/input.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Document</title>
+</head>
+<body id="mainBody" class="relative  h-fit w-full flex items-center justify-center ">
+
+
+    <!-- Modal -->
+    <!-- MAIN BODY------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div id="mainBody">
+    <!-- Navigation Bar -->
+    <header class="w-full z-0 pb-96 bg-gray-600 relative">
+    <nav class="container  w-full md:container flex items-center justify-between px-4 lg:px-32 mx-auto py-6   ">
+        <div class="">
+            <h1 class="font-bold text-2xl text-white">crownfund</h1>
+        </div>
+        <div class="hidden text-white md:flex space-x-8">
+            <a class="hover:text-gray-500" href="#">About</a>
+            <a class="hover:text-gray-500" href="#">Discover</a>
+            <a class="hover:text-gray-500" href="#">Get Started</a>
+        </div>
+        <button onclick="openMenu()" id="menuBtn" class=" md:hidden bg-transparent w-14 items-center relative h-9">
+        <span id="bar1" class="bar1 w-7 h-1 bg-white absolute translate-y-1.5 -translate-x-3.5"></span>
+        <span id="bar2" class="bar2 w-7 h-1 bg-white absolute -translate-y-0.5 -translate-x-3.5"></span>
+        <span id="bar3" class=" bar3 w-7 h-1 bg-white absolute  -translate-y-2.5 -translate-x-3.5"></span>
+        </button>
+        
+    </nav>
+    <div id="menu" class="menuItems w-full hidden absolute md:hidden animate-openMenu origin-top flex-col items-center space-y-6 py-10 bg-white">
+        <a class="text-xl" href="#">About</a>
+        <a class="text-xl" href="#">Discover</a>
+        <a class="text-xl" href="#">Get Started</a>
+    </div>
+</header>
+   
+<main class="w-full relative -mt-20 z-50 flex flex-col items-center">
+    <div class="">
+    <!-- Card 1 -->
+    <div class="card1 w-11/12 md:w-1/8 lg:w-1/2 relative flex flex-col z-30 items-center justify-center px-10 -mt-16  mx-auto h-fit pb-10 rounded-xl bg-white shadow-md">
+
+    <!-- Icon -->
+    <div class="w-full text-center">
+        <img class="h-14 mx-auto -mt-8" src="./image/logo-mastercraft.svg" alt="">
+    </div>
+    <!-- Heading -->
+    <h1 class="text-2xl text-center font-bold mt-7">Mastercraft Bamboo Monitor Riser</h1>
+    <p class="mt-3 text-gray-500 text-center">A beautiful &  handcrafted monitor stand to reduce neck and eye strain.</p>
+
+    <!-- Buttons -->
+    <div class="flex w-full px-2 h-14 justify-between gap-4  items-stretch mt-8">
+
+        <button id="modal-trigger"  class="text-white h-full bg-moderateCyan w-full md:w-fit px-5 sm:px-10 rounded-full font-semibold">Back this project</button>
+        <button onclick="bookmarked()" class="text-gray-500 flex flex-row items-center justify-center h-full w-fit bg-gray-100 rounded-full">
+            <div class="h-full flex-none">
+                <img class="bg-black h-full  rounded-full" id="bookmark" src="./image/icon-bookmark.svg" alt="">
+            </div>
+            <span id="bookmarkText" class="hidden md:block w-[120px]">Bookmark</span>
+        </button>
+    </div>
+
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card2 w-11/12 p-7 mt-7 md:w-1/8 lg:w-1/2 relative flex flex-col items-center  mx-auto h-fit pb-10 rounded-xl bg-white shadow-md">
+        <div class="grid w-full grid-rows-3 sm:grid-cols-3 sm:grid-rows-1">
+        <!-- column 1 -->
+        <div class=" sm:border-r-2 sm:border-b-0 text-center ">
+            <h1 id="totalPledge" class="text-4xl font-bold">$89,914</h1>
+            <p class=" text-gray-500 text-sm mt-2">of $100,000 backed</p>
+            <hr class="mt-5 w-2/3 mx-auto h-[1.5px] sm:hidden bg-slate-200">
+        </div>
+        <!-- column 2 -->
+        <div class=" sm:border-r-2 sm:border-b-0 pb-4 sm:pb-0  text-center ">
+            <h1 id="totalBackers" class="text-4xl font-bold">5,007</h1>
+            <p class=" text-gray-500 text-sm mt-2">total backers</p>
+            <hr class="mt-5 w-2/3 mx-auto h-px bg-slate-200 sm:hidden">
+        </div>
+        
+        <!-- column 3 -->
+        <div  class="text-center  sm:mt-0">
+            <h1 class="text-4xl font-bold">56</h1>
+            <p class=" text-gray-500 text-sm mt-2">days left</p>
+        </div>  
+        </div>
+
+        <div class="w-full mt-5 bg-gray-200 rounded-full h-3 mb-4 dark:bg-gray-100">
+        <div class="bg-gray-600 h-3 rounded-full dark:bg-moderateCyan" style="width: 75%"></div>
+</div>
+        
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card3 w-11/12 p-7 mt-7 md:w-1/8 lg:w-1/2 relative flex flex-col items-center  mx-auto h-fit pb-10 rounded-xl bg-white shadow-md">
+        
+        <h1 class="w-full text-start font-bold">About this project</h1>
+        <p class="text-sm leading-loose mt-8 text-gray-500">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing yor monitor
+            at eye level has the potential to improve your posture and make you more comfortable while at work,
+            helping you stay focused on the task at hand.
+        </p>
+        <p class="text-sm leading-loose mt-3 text-gray-500">  Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+            to allow notepads, pens, and USB sticks to be stored under the stand.
+        </p>
+
+        <!-- Box 1 -->
+    <div class="box1 w-full mt-7 shadow-md p-7 flex flex-col">
+        <div class="flex flex-col sm:flex-row justify-between">
+            <h1 class="font-extrabold">Bamboo Stand</h1>
+            <h3 class="text-moderateCyan font-medium">Pledge $25 or more</h3>
+        </div>
+        <p class="leading-loose text-sm text-gray-500 mt-5">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+            you'll be added to a special Backer member list.</p>
+        
+        <!-- Stocks -->
+        <div class="w-full flex justify-between items-center mt-4">
+            <h1 id="mainBambooLeft" class="font-bold text-3xl relative">101 <span class="text-sm font-light translate-y-1/3 ml-1 absolute">left</span></h1>
+            <button class="text-white bg-moderateCyan py-2.5 text-sm px-5 sm:px-5 rounded-full ">Select Reward</button>
+        </div>
+
+    </div>
+        <!-- Box 2 -->
+    <div class="box2 w-full mt-7 shadow-md p-7 flex flex-col">
+        <div class="flex flex-col sm:flex-row justify-between">
+            <h1 class="font-extrabold">Black Edition Stand</h1>
+            <h3 class="text-moderateCyan font-medium">Pledge $75 or more</h3>
+        </div>
+        <p class="leading-loose text-sm text-gray-500 mt-5">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+            member list. Shipping is included.</p>
+        
+        <!-- Stocks -->
+        <div class="w-full flex justify-between items-center mt-4">
+            <h1 id="mainBlackLeft" class="font-bold text-3xl relative">64 <span class="text-sm font-light translate-y-1/3 ml-1 absolute">left</span></h1>
+            <button class="text-white bg-moderateCyan py-2.5 text-sm px-5 sm:px-5 rounded-full ">Select Reward</button>
+        </div>
+
+    </div>
+        <!-- Box 3 -->
+    <div class="box3 opacity-20 w-full mt-7 shadow-md p-7 flex flex-col">
+        <div class="flex flex-col sm:flex-row justify-between">
+            <h1 class="font-extrabold">Mahogany Special Edition</h1>
+            <h3 class="text-moderateCyan font-medium">Pledge $200 or more</h3>
+        </div>
+        <p class="leading-loose text-sm text-gray-500 mt-5">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+            to our Backer member list. Shipping is included.</p>
+        
+        <!-- Stocks -->
+        <div class="w-full flex justify-between items-center mt-4">
+            <h1 class="font-bold text-3xl relative">0 <span class="text-sm font-light translate-y-1/3 ml-1 absolute">left</span></h1>
+            <button class="text-white bg-gray-300 py-2.5 text-sm px-5 sm:px-5 rounded-full ">Out of Stock</button>
+        </div>
+
+    </div>
+    
+    </div>
+        
+    
+</div>
+</main>
+ <!-- MODAL -->
+        
+ <div id="modals" class="fixed hidden overflow-y-scroll pt-72 inset-0 items-center justify-center z-50">
+    <div id="modal" class="bg-white mainModal mt-96 mb-40  w-11/12 md:w-1/8 lg:w-1/2 p-6 h-fit rounded shadow-lg">
+        <!-- Header -->
+        <div class="w-full text-right h-fit">
+            <button class="text-lg font-bold" onclick="closeModal()">&#x2715;</button>
+        </div>
+        <!-- Heading -->
+        <div class="w-full flex flex-col">
+            <h1 class="text-2xl font-bold">Back this project</h1>
+            <p class="text-gray-500 text-sm mt-4">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+        </div>
+    
+        <div class="flex flex-col space-y-11" >
+        <!-- Card 1 -->
+        <div id="card1" onclick="card1()" class="p-7 rounded-md mt-4">
+            <div class="flex items-start">
+             <input  name="select" id="radio1" class="mr-6 mt-1.5" type="radio">
+            <!-- Label -->
+            <div class="">
+             <label for="radio1" class="font-bold">Pledge with no reward</label>
+            <p class="mt-3 text-sm text-gray-400">Choose to support us without a reward if you simply believe in our project. As a backer, 
+            you will be signed up to receive product updates via email.</p>   
+            </div>   
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div id="card2" onclick="card2()" class="rounded-md mt-4">
+            <div class="p-7">
+            <div class="flex items-start">
+             <input name="select" id="radio2" class="mr-6 mt-1.5" type="radio">
+            <!-- Label -->
+            <div class="Header-captionContainer">
+            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row">
+            <label for="radio1" class="font-bold">Bamboo Stand</label> <h1 class="text-moderateCyan font-bold md:ml-4">Pledge $25 or more</h1>
+            </div>
+            <h1 id="bambooLeft" class="font-bold text-xl  right-0 relative mr-7">101 <span class="text-sm font-light translate-y-0.5 ml-1 absolute">left</span></h1>
+            </div>
+            <p class="mt-3 text-sm text-gray-400">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+                you’ll be added to a special Backer member list.</p>   
+            </div>   
+            </div>
+            
+        </div>
+        <!-- LowerBox 2 -->
+        <div id="lowerBox2" class="hidden mt-4 border-t-2 justify-between">
+            <div class="flex flex-col sm:flex-row justify-between mx-6 w-full my-5">
+            <p class="text-md flex justify-center sm:justify-start py-2 sm:py-0 items-center whitespace-nowrap text-gray-400">Enter your pledge</p>
+            <div class="flex items-center space-x-3 justify-center sm:justify-end ">
+                <!-- Input Field -->
+             <input id="bambooPledge"  class="border-2 h-full w-20 pl-4 py-2 placeholder:text-xs rounded-full " min="25" value="25" type="number" placeholder="$">
+             <button onclick="pledgeBamboo()" class="bg-moderateCyan text-xs h-full rounded-full px-6 text-white font-bold py-1.5">Continue</button> 
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Card 3 -->
+        <div id="card3" onclick="card3()" class="rounded-md mt-4">
+            <div class="p-7">
+            <div class="flex items-start">
+             <input name="select" id="radio3" class="mr-6 mt-1.5" type="radio">
+            <!-- Label -->
+            <div class="Header-captionContainer">
+            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row">
+            <label for="radio1" class="font-bold">Black Edition Stand</label> <h1 class="text-moderateCyan font-bold md:ml-4">Pledge $75 or more</h1>
+            </div>
+            <h1 id="blackLeft" class="font-bold text-xl  right-0 relative mr-7">64<span class="text-sm font-light translate-y-0.5 ml-1 absolute">left</span></h1>
+            </div>
+            <p class="mt-3 text-sm text-gray-400">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+                member list. Shipping is included.</p>   
+            </div>   
+            </div>
+            
+        </div>
+         <!-- LowerBox 3 -->
+        <div id="lowerBox3" class="hidden mt-4 border-t-2 justify-between">
+            <div class="flex flex-col sm:flex-row justify-between mx-6 w-full my-5">
+            <p class="text-md flex justify-center sm:justify-start py-2 sm:py-0 items-center whitespace-nowrap text-gray-400">Enter your pledge</p>
+            <div class="flex items-center space-x-3 justify-center sm:justify-end ">
+                <!-- Input Field -->
+             <input id="blackPledge" class="border-2 h-full w-20 pl-4 py-2 placeholder:text-xs rounded-full " min="75" value="75" type="number" placeholder="$">
+             <button onclick="pledgeBlack()" class="bg-moderateCyan text-xs h-full rounded-full px-6 text-white font-bold py-1.5">Continue</button> 
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="rounded-md mt-4 opacity-25">
+            <div class="p-7">
+            <div class="flex items-start">
+             <input name="select" id="radio4" class="mr-6 mt-1.5" type="radio">
+            <!-- Label -->
+            <div class="Header-captionContainer">
+            <div class="flex justify-between">
+            <div class="flex flex-col md:flex-row">
+            <label for="radio1" class="font-bold">Mahogany Special Edition</label> <h1 class="text-moderateCyan font-bold md:ml-4">Pledge $200 or more</h1>
+            </div>
+            <h1 class="font-bold text-xl  right-0 relative mr-7">0<span class="text-sm font-light translate-y-0.5 ml-1 absolute">left</span></h1>
+            </div>
+            <p class="mt-3 text-sm text-gray-400">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+                to our Backer member list. Shipping is included.</p>   
+            </div>   
+            </div>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
